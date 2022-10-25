@@ -78,14 +78,20 @@ hold off
 % ----------------- Insert your codes here for (c) ---------------------
 % Please note that an approximate solution is fine, if you motivate what you did. 
 % You should use SDfilt for this part
-
+figure()
 for l = 5:3:19
     x = SDfilt(:,l);
     y = SDfilt(:,l+1);
     z = SDfilt(:,l+2);
 
-    xdis = trapz(x)
-    ydis = trapz(x)
-    zdis = trapz(z)
+    xdis = trapz(x);
+    ydis = trapz(x);
+    zdis = trapz(z); 
+
+    xdiscum = cumtrapz(x);
+    ydiscum = cumtrapz(x);
+    zdiscum = cumtrapz(z);
+    hold on
+    plot3(xdiscum,ydiscum,zdiscum)
 end
 % -------------------------------------------------------------------------
