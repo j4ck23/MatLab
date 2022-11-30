@@ -86,7 +86,7 @@ df = length(DataSet1) - 1;
 disp('The T_Score is 2.064')
 
 for i = 1:length(Tscore)
-    disp(['The Tscore for ',Tests(i),' is ',num2str(Tscore(i))])
+    disp(['The T Critical Score for ',Tests(i),' is ',num2str(Tscore(i))])
 end
 disp(' ')%Break in output
 % -------------------------------
@@ -138,15 +138,15 @@ disp(['The Honestly Significant Difference is ',num2str(HSD)])
 res = multcompare(stats, 'alpha', 0.05, 'ctype','hsd');
 
 if abs(mean(fullg)-mean(halfg))>HSD
-    disp('Significative difference between group 0 and 1')
+    disp('Significative difference between group Full Gravity and Half Gravity')
 end
 
 if abs(mean(fullg)-mean(thirdg))>HSD
-    disp('Significative difference between group 0 and 2')
+    disp('Significative difference between group Full Gravity and Thrid Gravity')
 end
 
 if abs(mean(halfg)-mean(thirdg))>HSD
-    disp('Significative difference between group 0 and 3')
+    disp('Significative difference between group Half Gravity and Thrid Gravity')
 end
 % --------------------------------
 % --------------------------------
